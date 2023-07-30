@@ -18,8 +18,21 @@
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
+    <appender name="udacity_eCommerce_app" class="com.splunk.logging.HttpEventCollectorLogbackAppender">
+        <url>http://localhost:8088</url>
+        <token>ef69c709-bcff-4bc7-9a9e-45e54ca9d0fe</token>
+        <index>udacity_ecommerce_app_index</index>
+        <disableCertificateValidation>true</disableCertificateValidation>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%m</pattern>
+        </layout>
+    </appender>
+    <logger name ="udacity_eCommerce_app" level="debug">
+        <appender-ref ref="udacity_eCommerce_app" />
+    </logger>
     <root level="debug">
         <appender-ref ref="ROLLING-FILE"/>
         <appender-ref ref="STDOUT"/>
+        <appender-ref ref="udacity_eCommerce_app" />
     </root>
 </configuration>

@@ -1,0 +1,20 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<configuration>-->
+<!--    <appender name="udacity_eCommerce_app" class="com.splunk.logging.HttpEventCollectorLogbackAppender">-->
+<!--        <url>http://localhost:8088</url>-->
+<!--        <token>ef69c709-bcff-4bc7-9a9e-45e54ca9d0fe</token>-->
+<!--        <index>udacity_ecommerce_app_index</index>-->
+<!--        <disableCertificateValidation>true</disableCertificateValidation>-->
+<!--&lt;!&ndash;        <layout class="ch.qos.logback.classic.PatternLayout">&ndash;&gt;-->
+<!--&lt;!&ndash;            <pattern>%m</pattern>&ndash;&gt;-->
+<!--&lt;!&ndash;        </layout>&ndash;&gt;-->
+<!--        <layout class="ch.qos.logback.contrib.json.classic.JsonLayout">-->
+<!--            <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter" />-->
+<!--            <timestampFormat>yyyy-MM-dd' 'HH:mm:ss.SSS Z</timestampFormat>-->
+<!--            <appendLineSeparator>true</appendLineSeparator>-->
+<!--        </layout>-->
+<!--    </appender>-->
+<!--    <logger name ="udacity_eCommerce_app" level="debug">-->
+<!--        <appender-ref ref="udacity_eCommerce_app" />-->
+<!--    </logger>-->
+<!--</configuration>-->

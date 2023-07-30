@@ -71,6 +71,11 @@ public class UserController {
 			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
+		if (userRepository.findByUsername(user.getUsername()) != null) {
+			log.info("User name is exist");
+			log.info("UserController.createUser: END ");
+			return ResponseEntity.badRequest().build();
+		}
 		userRepository.save(user);
 		log.info("UserController.createUser: Created user {} successfully.", createUserRequest.getUsername());
 		log.debug("UserController.createUser: END ");

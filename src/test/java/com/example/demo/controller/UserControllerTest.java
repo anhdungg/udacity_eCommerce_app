@@ -84,7 +84,6 @@ public class UserControllerTest {
 		User user = response.getBody();
 		assertNotNull(user);
 		assertEquals(0, user.getId());
-		;
 	}
 
 	@Test
